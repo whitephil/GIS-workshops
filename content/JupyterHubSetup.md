@@ -1,7 +1,5 @@
 ---
 layout: default
-
-nav_order: 8
 ---
 
 # Setting up a JupyterHub for Teaching Workshops on AWS
