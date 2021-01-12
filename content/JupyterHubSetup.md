@@ -1,5 +1,6 @@
 ---
 layout: default
+nav_exclude: true
 ---
 
 # Setting up a JupyterHub for Teaching Workshops on AWS
