@@ -37,7 +37,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-footer_content: <a href="https://github.com/outpw/GIS-workshops" target="_blank">View this workshop in GitHub</a>
+footer_content: <a href="https://github.com/outpw/GIS-workshops" target="_blank">View this site on GitHub</a>
 
 # Exclude from processing.
 # The following items will not be processed, by default.
