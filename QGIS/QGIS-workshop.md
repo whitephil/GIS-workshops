@@ -19,7 +19,7 @@ University of Colorado Boulder Libraries
 {: .prereq}
 
 ### __Download the Workshop Data!__
-[Data Download](data/QGIS_DATA.zip){: .btn .btn-blue }
+[Data Download](data/QGIS_Data.zip){: .btn .btn-blue }
 
 ### Goal of this Workshops
 The purpose of this workshop is to orient you to the QGIS interface and introduce you to common GIS procedures in QGIS. This workshop does not replace formal GIS coursework, but will help you get started on basic GIS projects using QGIS.
