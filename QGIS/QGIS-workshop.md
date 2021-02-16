@@ -7,7 +7,7 @@ has_children: true
 
 # QGIS Workshop
 
-Welcome to the QGIS Introductory workshop guide page. During the workshop, we will walk through the information and tasks detailed on these pages. Use the table of contents to navigate through the workshop. If you're new to QGIS, we recommend [Getting Started here!](/QGIS-gettingstarted)  
+Welcome to the QGIS Introductory workshop guide page. During the workshop, we will walk through the information and tasks detailed on these pages. Use the table of contents to navigate through the workshop. If you're new to QGIS, we recommend [Getting Started here!](../QGIS/QGIS-gettingstarted)  
 ____
 ### Presenters
 Phil White <a href='https://github.com/outpw' target='_blank'><img src='../content/img/GitHub-Mark-custom.svg' style='width:15px; padding:0; border:none !important;'></a>  
