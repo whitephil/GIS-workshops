@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Maps</title>
+
+		<meta name="description" content="What are web maps and how do they work?">
+		<meta name="author" content="Phil White">
+
+		<meta name="reveal" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="creator" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/wamlstyle.css" id="theme">
+
+		<!-- emoji style -->
+		<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
+		<style>
+
+		#slide_head {
+			position: fixed;
+			top: 30px;
+			left: 0px;
+			font-size: 30px;
+			text-align: left;
+		}
+
+		#left_slide {
+			text-align: left;}
+
+		#cite {
+			position: fixed;
+			bottom: -500px;
+			left: 0px;
+			font-size: 15px;
+		}
+
+		.float-container {
+    	padding: 20px;
+			}
+
+		.float-child {
+		    width: 50%;
+		    float: left;
+			}
+
+		</style>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section data-background-color='#607B8B'>
+					<h2 style="text-align: left; color:white">What the heck is a webmap?</h2>
+					<p style="text-align: left; color:white; font-size: .75em">University Libraries | CRDDS</p><br><br><br>
+				</section>
+
+				<section>
+					<h3>Who has used a web map today?</h3>
+				</section>
+
+				<section>
+					<h3>Web maps have become ubiquitous... </h3>
+						<p class='fragment'><a href='https://maps.google.com' target='_blank'>Google Maps</a></p><br>
+						<p class='fragment'><a href='https://www.openstreetmap.org' target='_blank'>OpenStreetMap</a></p><br>
+						<p class='fragment'><a href='https://www.mapquest.com' target='_blank'>MapQuest</a></p><br>
+						<p class='fragment'><a href='https://maps.stamen.com' target='_blank'>maps.stamen.com</a></p>
+				</section>
+
+				<section>
+					<h3> Let's define "web map"
+				</section>
+
+				<section>
+					<h2>Not paper!</h2>
+					<h2 class= 'fragment'>...Digital...</h2>
+				</section>
+
+				<section>
+					<h2>  ...but not static.</h2>
+					<h2 class='fragment fade-right' style='font-style:italic'>Interactive!</h2>
+				</section>
+
+				<section>
+					<h2>Viewed in a web browser.</h2>
+				</section>
+
+				<section>
+					<h2>A web map is not:</h2>
+					<h2 class='fragment'>"GIS on the web"</h2>
+				</section>
+
+				<section>
+					<h2>A web map is:</h2>
+					<h2 class='fragment fade-right' style='font-style:italic'>"Slippy!"</h2>
+				</section>
+
+				<section>
+					<h2>A bit of history.</h2>
+				</section>
+
+				<section data-background-image='https://images.computerhistory.org/revonline/images/500004990-03-01.jpg?w=600'>
+					<h2 class='fragment'><span style='background-color:#607B8B; color:white'>1996: MapQuest gives us a map over web service</span></h2>
+					<div id='cite'>
+						<p><a href='https://www.computerhistory.org/revolution/the-web/20/392/2345' target='_blank' style='color:blue; text-decoration:underline'>computerhistory.org</a></p>
+					</div>
+				</section>
+
+				<section data-background-image='img/biggoogle.png'>
+					<h2 class='fragment'>2005: Google gives us the slippy map!</h2>
+					<div id='cite'>
+						<a href='https://www.google.com/maps' target='_blank' style='color:white; text-decoration:underline'>Google Maps</a>
+					</div>
+				</section>
+
+				<section>
+					<h2>How did that map get so slippy?</h2>
+				</section>
+
+				<section>
+					<div id='left_slide'>
+					<h3 style='text-align:left'>Tiles:</h3>
+						<div class='float-container'>
+							<div class='float-child'>
+								<a href='https://tile.openstreetmap.org/4/2/5.png' target='_blank'><img src='https://tile.openstreetmap.org/4/2/5.png'></a>
+							</div>
+							<div class='float-child' style='text-align:left'>
+								<p class='fragment'>A grid of images</p>
+								<p class='fragment'>20ish zoom levels</p>
+								<p class='fragment'>Images increase exponentially at larger scale</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Anatomy of a web map</h2>
+				</section>
+
+				<section data-background-image='img/Basemap.png'>
+					<div  id='left_slide'>
+						<h2>Basemap</h2>
+					</div>
+				</section>
+
+				<section data-background-image='img/Point.png'>
+					<div  id='left_slide'>
+						<h2>Point</h2>
+					</div>
+				</section>
+
+				<section data-background-image='img/Lines.png'>
+					<div  id='left_slide'>
+						<h2>Lines</h2>
+					</div>
+				</section>
+
+				<section data-background-image='img/Polygons.png'>
+					<div  id='left_slide'>
+						<h2>Polygons</h2>
+					</div>
+				</section>
+
+				<section>
+					<div  id='left_slide'>
+						<h3>Data</h3><br>
+							<p class='fragment'>Basemap:</p><br>
+							<ul class='fragment'>
+								<li>Map tiles</li><br>
+								<li>Usually 3rd party, but you can create them from scratch too (but that's another workshop)</li>
+							</ul>
+					</div>
+				</section>
+
+				<section id='left_slide'>
+					<div>
+						<h3>Data</h3><br>
+							<p class='fragment'>Feature Layers</p><br>
+							<ul class='fragment'>
+								<li>GeoJSON (ideal web-format)</li>
+								<li>Spreadsheet</li>
+								<li>Shapefile</li>
+								<li>Other geo-formats... </li>
+							</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>How do I make a web map?</h2>
+				</section>
+
+				<section>
+					<div id='left_slide'>
+						<h3>GUI-based options:</h3>
+							<ul class='fragment'>
+								<li>Google</li>
+								<li>ArcGIS Online</li>
+								<li>Carto</li>
+							</ul>
+					</div>
+				</section>
+
+				<section>
+					<div id='left_slide'>
+						<h3>Code-based options:</h3>
+							<ul class='fragment'>
+								<li>JavaScript: Leaflet, MapBox, Google</li>
+								<li>R: tmap, Leaflet</li>
+								<li>Python: Folium</li>
+							</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Ready to make a web map?</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
