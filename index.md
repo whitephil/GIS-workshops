@@ -13,6 +13,7 @@ ____
 - [Introduction to QGIS](QGIS/QGIS-workshop.html)
 - [Introduction to ArcGIS](ArcGIS/ArcGIS-workshop.html)
 - [Introduction to GeoPandas](GeoPandas/GeoPandas-workshop.html)
+- [Web Mapping](Web-mapping/web-mapping-workshop.html)  
 
 ## Related Sites:
 
