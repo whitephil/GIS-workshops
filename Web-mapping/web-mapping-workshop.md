@@ -26,7 +26,10 @@ University of Colorado Boulder Libraries
 {: .prereq}
 
 ### __Download the Workshop Data!__
-[Part 1 Data](https://github.com/aranganath24/R_webmapping/raw/gh-pages/workshop_data.zip){: .btn .btn-blue }
+
+[Part 1 Data](https://github.com/aranganath24/R_webmapping/raw/gh-pages/workshop_data.zip){: .btn .btn-blue }  
+
+[Part 2 Data](data/Folium_Data.zip){: .btn .btn-blue }
 
 ### Goal of this Workshops
 The purpose of this workshop is toorient you to the basics of web maps and introduce you to developing web maps in R or Python.
