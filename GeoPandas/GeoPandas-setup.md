@@ -32,7 +32,7 @@ Your home page will look like this:
 
 ### Step 3: Import Workshop Notebooks
 
-__Go to the following link: [bit.ly/gpdnotebooks](http://bit.ly/gpdnotebooks)__
+__Go to the following link: [bit.ly/gpd-notebooks](http://bit.ly/gpd-notebooks)__
 
 Now, refresh your JupyterHub homepage. This will add all of the workshop notebooks to your JupyterHub. It should now look like this:  
 
