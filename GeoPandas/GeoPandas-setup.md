@@ -10,12 +10,12 @@ nav_order: 2
 *Very easy!*
 
 ### Step 1: Create an account:  
-__[geopandas.rc.colorado.edu/signup](https://geopandas.rc.colorado.edu/signup)__
+__[jupyterhub-crdds-colorado.org/](https://jupyterhub-crdds-colorado.org/)__
 This will only be available until tomorrow, but all workshop materials are available on GitHub for later use.  
 
 ![HubSignUp][SignUp]
 
-*You will set your password the first time you log in, so type in anything you want here.*  
+*The password will be shared during the workshop.*  
 
 ***
 
@@ -32,7 +32,7 @@ Your home page will look like this:
 
 ### Step 3: Import Workshop Notebooks
 
-__Go to the following link: [bit.ly/gpd-notebooks](http://bit.ly/gpd-notebooks)__
+__Go to the following link: [https://jupyterhub-crdds-colorado.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Foutpw%2Fgeopandas_notebooks&urlpath=lab%2Ftree%2Fgeopandas_notebooks%2F&branch=master](https://jupyterhub-crdds-colorado.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Foutpw%2Fgeopandas_notebooks&urlpath=lab%2Ftree%2Fgeopandas_notebooks%2F&branch=master)__
 
 Now, refresh your JupyterHub homepage. This will add all of the workshop notebooks to your JupyterHub. It should now look like this:  
 
@@ -42,7 +42,7 @@ Now, refresh your JupyterHub homepage. This will add all of the workshop noteboo
 
 [Python]: img/PythonLogo.png
 [Pandas]: img/Pandas_logo.png
-[SignUp]: img/gpdSignUp.png
+[SignUp]: img/JH_log_in.png
 [LogIn]: img/gpdLogin.png
 [HubHome]: img/hubHome.png
 [HubHome2]: img/hubHome2.png
