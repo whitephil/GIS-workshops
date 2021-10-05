@@ -19,18 +19,7 @@ This will only be available until tomorrow, but all workshop materials are avail
 
 ***
 
-### Step 2: Log in:
-__[geopandas.rc.colorado.edu/hub/login](https://geopandas.rc.colorado.edu/hub/login)__
-
-![HubLogin][LogIn]  
-
-Your home page will look like this:   
-
-![HomePage][HubHome]  
-
-***
-
-### Step 3: Import Workshop Notebooks
+### Step 2: Import Workshop Notebooks
 
 __Go to the following link: [https://jupyterhub-crdds-colorado.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Foutpw%2Fgeopandas_notebooks&urlpath=lab%2Ftree%2Fgeopandas_notebooks%2F&branch=master](https://jupyterhub-crdds-colorado.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Foutpw%2Fgeopandas_notebooks&urlpath=lab%2Ftree%2Fgeopandas_notebooks%2F&branch=master)__
 
