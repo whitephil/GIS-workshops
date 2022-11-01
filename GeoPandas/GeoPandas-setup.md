@@ -9,20 +9,17 @@ nav_order: 2
 ## JupyterHub Setup:  
 *Very easy!*
 
-### Step 1: Create an account:  
-__[geopandas.rc.colorado.edu/signup](https://geopandas.rc.colorado.edu/signup)__
-This will only be available until tomorrow, but all workshop materials are available on GitHub for later use.  
+### Step 1: Log in:
+I will create your username in the session, and you'll set your password the first time you log in.  
+__[https://jupyter-crdds.rc.colorado.edu/](https://jupyter-crdds.rc.colorado.edu/)__
+This will only be available through this week, but all workshop materials are available on GitHub for later use.  
 
-![HubSignUp][SignUp]
+![HubLogin][LogIn]  
+__[geopandas.rc.colorado.edu/hub/login](https://geopandas.rc.colorado.edu/hub/login)__
 
 *You will set your password the first time you log in, so type in anything you want here.*  
 
 ***
-
-### Step 2: Log in:
-__[geopandas.rc.colorado.edu/hub/login](https://geopandas.rc.colorado.edu/hub/login)__
-
-![HubLogin][LogIn]  
 
 Your home page will look like this:   
 
@@ -30,9 +27,9 @@ Your home page will look like this:
 
 ***
 
-### Step 3: Import Workshop Notebooks
+### Step 2: Import Workshop Notebooks
 
-__Go to the following link: [bit.ly/gpdnotebooks](http://bit.ly/gpdnotebooks)__
+__Go to the following link: [bit.ly/geopdnotebooks](http://bit.ly/geopdnotebooks)__
 
 Now, refresh your JupyterHub homepage. This will add all of the workshop notebooks to your JupyterHub. It should now look like this:  
 
