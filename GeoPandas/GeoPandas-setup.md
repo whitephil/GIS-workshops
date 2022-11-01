@@ -11,6 +11,8 @@ nav_order: 2
 
 ### Step 1: Log in:
 I will create your username in the session, and you'll set your password the first time you log in.  
+
+**Go to the following link:**   
 __[https://jupyter-crdds.rc.colorado.edu/](https://jupyter-crdds.rc.colorado.edu/)__
 This will only be available through this week, but all workshop materials are available on GitHub for later use.  
 
