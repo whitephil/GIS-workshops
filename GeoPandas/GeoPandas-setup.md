@@ -15,7 +15,7 @@ __[https://jupyter-crdds.rc.colorado.edu/](https://jupyter-crdds.rc.colorado.edu
 This will only be available through this week, but all workshop materials are available on GitHub for later use.  
 
 ![HubLogin][LogIn]  
-__[geopandas.rc.colorado.edu/hub/login](https://geopandas.rc.colorado.edu/hub/login)__
+
 
 *You will set your password the first time you log in, so type in anything you want here.*  
 
