@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 5. Exercise 3
-parent: GeoPandas
+parent: Rasterio
 has_children: false
 nav_order: 5
 ---

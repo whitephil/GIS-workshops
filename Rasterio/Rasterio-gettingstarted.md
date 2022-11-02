@@ -11,7 +11,7 @@ __GIS:__ (Geographic Information System) An integrated collection of computer so
 
 __Python:__ A free and open source, general-purpose programming language. It's easy to use and read, and it's named after Monty Python. [Python.org](https://python.org)
 
-__Pandas:__ Raster-I/O or input/output. Some say 'Raw-ster Eye Oh', some 'Ra (like "rat") -ster Eye Oh', and yet others say 'Ra (as in rat) Raw -Stereo'. At any rate, it is a popular package for working with raster data in Python. [rasterio.readthedocs.io](https://rasterio.readthedocs.io/en/latest/index.html)
+__Rasterio:__ Raster-I/O or input/output. Some say 'Raw-ster Eye Oh', some 'Ra (like "rat") -ster Eye Oh', and yet others say 'Ra (as in rat) Raw -Stereo'. At any rate, it is a popular package for working with raster data in Python. The emphasis here is on input/output... With Rasterio, usually you use it to read a raster (the input), then transform it to an array that you can use other tools (numpy, scipy, etc) to analyze, then write the new data as a raster (the output). [rasterio.readthedocs.io](https://rasterio.readthedocs.io/en/latest/index.html)
 
 __Visit:__
 - [GIS Library guide](https://libguides.colorado.edu/gis)

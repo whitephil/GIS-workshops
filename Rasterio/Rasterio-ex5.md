@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 7. Exercise 4
-parent: GeoPandas
+title: 7. Exercise 5
+parent: Rasterio
 has_children: false
-nav_order: 6
+nav_order: 7
 ---
 
 <iframe src="notebooks/5.%20Rasterio%20and%20Numpy.html" style="width: 1000px; height: 4200px;" frameBorder="0"></iframe>

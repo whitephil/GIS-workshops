@@ -26,7 +26,7 @@ Your home page will look like this:
 
 ### Step 2: Import Workshop Notebooks
 
-__Go to the following link: [bit.ly/geopdnotebooks](http://bit.ly/geopdnotebooks)__
+__Go to the following link: [bit.ly/RIOnotebooks](http://bit.ly/RIOnotebooks)__
 
 Now, refresh your JupyterHub homepage. This will add all of the workshop notebooks to your JupyterHub. It should now look like this:  
 
