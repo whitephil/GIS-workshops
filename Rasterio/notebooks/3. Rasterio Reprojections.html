@@ -36,7 +36,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
 .highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
 .highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
-.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
 .highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
 .highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
 .highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
@@ -14465,6 +14464,10 @@ a.anchor-link {
   display: none;
 }
 
+.highlight  {
+  margin: 0.4em;
+}
+
 /* Input area styling */
 .jp-InputArea {
   overflow: hidden;
@@ -14474,26 +14477,9 @@ a.anchor-link {
   overflow: hidden;
 }
 
-.CodeMirror.cm-s-jupyter .highlight pre {
-/* weird, but --jp-code-padding defined to be 5px but 4px horizontal padding is hardcoded for pre.CodeMirror-line */
-  padding: var(--jp-code-padding) 4px;
+.CodeMirror pre {
   margin: 0;
-
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
-
-}
-
-.jp-OutputArea-output pre {
-  line-height: inherit;
-  font-family: inherit;
-}
-
-.jp-RenderedText pre {
-  color: var(--jp-content-font-color1);
-  font-size: var(--jp-code-font-size);
+  padding: 0;
 }
 
 /* Using table instead of flexbox so that we can use break-inside property */
@@ -14573,12 +14559,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: {
-                    automatic: true
+                    linebreaks: { 
+                    automatic: true 
                     }
                 }
             });
-
+        
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14634,44 +14620,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">'../'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;/home/jupyter-chain.saw&#39;</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -14682,7 +14645,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Open up the Flatirons_DEM_1m GeoTiff:</p>
-<div class="highlight"><pre><span></span><span class="n">src</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;workshopdata/Flatirons_DEM_1m.tif&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">src</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;workshopdata/dem.tif&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14693,10 +14656,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">src</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'workshopdata/Flatirons_DEM_1m.tif'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">src</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;workshopdata/dem.tif&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14723,7 +14686,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">src</span><span class="o">.</span><span class="n">meta</span>
@@ -14740,9 +14703,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+<div class="jp-OutputArea-child">
+
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -14750,7 +14715,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>{&#39;driver&#39;: &#39;GTiff&#39;,
  &#39;dtype&#39;: &#39;float32&#39;,
- &#39;nodata&#39;: -3.4028234663852886e+38,
+ &#39;nodata&#39;: -3.4028234e+38,
  &#39;width&#39;: 2702,
  &#39;height&#39;: 2522,
  &#39;count&#39;: 1,
@@ -14784,7 +14749,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">src_crs</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">crs</span>
@@ -14813,7 +14778,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">src_crs</span><span class="p">)</span>
@@ -14830,7 +14795,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
+
 <div class="jp-OutputArea-child">
+
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -14867,7 +14834,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dst_crs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'EPSG:4326'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dst_crs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;EPSG:4326&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14948,34 +14915,35 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
+
 <div class="jp-OutputArea-child">
+
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In [10], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">calculate_default_transform</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">src_crs</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dst_crs</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">src_width</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">src_height</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">src_bounds</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Temp\ipykernel_16072\1704990294.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>calculate_default_transform<span class="ansi-yellow-intense-fg ansi-bold">(</span>src_crs<span class="ansi-yellow-intense-fg ansi-bold">,</span> dst_crs<span class="ansi-yellow-intense-fg ansi-bold">,</span> src_width<span class="ansi-yellow-intense-fg ansi-bold">,</span> src_height<span class="ansi-yellow-intense-fg ansi-bold">,</span> src_bounds<span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rasterio/env.py:394</span>, in <span class="ansi-cyan-fg">ensure_env.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwds)</span>
-<span class="ansi-green-intense-fg ansi-bold">    392</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-intense-fg ansi-bold">    393</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> Env<span style="color: rgb(98,98,98)">.</span>from_defaults():
-<span class="ansi-green-fg">--&gt; 394</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">f</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">kwds</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Continuum\anaconda3\lib\site-packages\rasterio\env.py</span> in <span class="ansi-cyan-fg">wrapper</span><span class="ansi-blue-intense-fg ansi-bold">(*args, **kwds)</span>
+<span class="ansi-green-fg">    395</span>         <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    396</span>             <span class="ansi-green-intense-fg ansi-bold">with</span> Env<span class="ansi-yellow-intense-fg ansi-bold">.</span>from_defaults<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 397</span><span class="ansi-yellow-intense-fg ansi-bold">                 </span><span class="ansi-green-intense-fg ansi-bold">return</span> f<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>args<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwds<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    398</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> wrapper
+<span class="ansi-green-fg">    399</span> 
 
-File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rasterio/warp.py:467</span>, in <span class="ansi-cyan-fg">calculate_default_transform</span><span class="ansi-blue-fg">(src_crs, dst_crs, width, height, left, bottom, right, top, gcps, rpcs, resolution, dst_width, dst_height, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    463</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">Bounding values and rational polynomial coefficients may not</span><span style="color: rgb(175,0,0)">&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">    464</span>                      <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)"> be used together.</span><span style="color: rgb(175,0,0)">&#34;</span>)
-<span class="ansi-green-intense-fg ansi-bold">    466</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">any</span>(x <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> x <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> (left, bottom, right, top)) <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> (gcps <span class="ansi-bold" style="color: rgb(175,0,255)">or</span> rpcs):
-<span class="ansi-green-fg">--&gt; 467</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">Either four bounding values, ground control points,</span><span style="color: rgb(175,0,0)">&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">    468</span>                      <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)"> or rational polynomial coefficients must be specified</span><span style="color: rgb(175,0,0)">&#34;</span>)
-<span class="ansi-green-intense-fg ansi-bold">    470</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> gcps <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> rpcs:
-<span class="ansi-green-intense-fg ansi-bold">    471</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ground control points and rational polynomial</span><span style="color: rgb(175,0,0)">&#34;</span>,
-<span class="ansi-green-intense-fg ansi-bold">    472</span>                      <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)"> coefficients may not be used together.</span><span style="color: rgb(175,0,0)">&#34;</span>)
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Continuum\anaconda3\lib\site-packages\rasterio\warp.py</span> in <span class="ansi-cyan-fg">calculate_default_transform</span><span class="ansi-blue-intense-fg ansi-bold">(src_crs, dst_crs, width, height, left, bottom, right, top, gcps, resolution, dst_width, dst_height)</span>
+<span class="ansi-green-fg">    452</span> 
+<span class="ansi-green-fg">    453</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> any<span class="ansi-yellow-intense-fg ansi-bold">(</span>x <span class="ansi-green-intense-fg ansi-bold">is</span> <span class="ansi-green-intense-fg ansi-bold">None</span> <span class="ansi-green-intense-fg ansi-bold">for</span> x <span class="ansi-green-intense-fg ansi-bold">in</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span>left<span class="ansi-yellow-intense-fg ansi-bold">,</span> bottom<span class="ansi-yellow-intense-fg ansi-bold">,</span> right<span class="ansi-yellow-intense-fg ansi-bold">,</span> top<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">and</span> <span class="ansi-green-intense-fg ansi-bold">not</span> gcps<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 454</span><span class="ansi-yellow-intense-fg ansi-bold">         raise ValueError(&#34;Either four bounding values or ground control points&#34;
+</span><span class="ansi-green-fg">    455</span>                          &#34;must be specified&#34;)
+<span class="ansi-green-fg">    456</span> 
 
-<span class="ansi-red-fg">ValueError</span>: Either four bounding values, ground control points, or rational polynomial coefficients must be specified</pre>
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: Either four bounding values or ground control pointsmust be specified</pre>
 </div>
 </div>
 
@@ -14991,8 +14959,8 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Oops! What's going on here?</p>
-<pre><code>print(src_bounds)
-</code></pre>
+
+<pre><code>print(src_bounds)</code></pre>
 
 </div>
 </div>
@@ -15019,7 +14987,9 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
+
 <div class="jp-OutputArea-child">
+
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15071,7 +15041,9 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+<div class="jp-OutputArea-child">
+
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
@@ -15096,7 +15068,7 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>That gets slightly tedious...</p>
-<p>You can use a python &quot;star expression&quot; to unpack a variable that is a sequence of values...  Note this is different from a ** expression in that these are not key:value pairs, it's just the &quot;value&quot;...</p>
+<p>You can use a python "star expression" to unpack a variable that is a sequence of values...  Note this is different from a ** expression in that these are not key:value pairs, it's just the "value"...</p>
 <div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">src_bounds</span><span class="p">)</span>
 </pre></div>
 
@@ -15125,7 +15097,9 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
+
 <div class="jp-OutputArea-child">
+
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15159,7 +15133,7 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">calculate_default_transform</span><span class="p">(</span><span class="n">src_crs</span><span class="p">,</span> <span class="n">dst_crs</span><span class="p">,</span> <span class="n">src_width</span><span class="p">,</span> <span class="n">src_height</span><span class="p">,</span> <span class="o">*</span><span class="n">src_bounds</span><span class="p">)</span>
@@ -15176,16 +15150,18 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+<div class="jp-OutputArea-child">
+
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(Affine(1.054870630740701e-05, 0.0, -105.30668193364492,
-        0.0, -1.054870630740701e-05, 39.998289496963764),
+<pre>(Affine(1.0548706307405893e-05, 0.0, -105.30668193364492,
+        0.0, -1.0548706307405893e-05, 39.998289496963764),
  3009,
  2161)</pre>
 </div>
@@ -15206,8 +15182,8 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 <p>Sweet! What we have here is a <a href="https://www.w3schools.com/python/python_tuples.asp">tuple</a> that contains the transformation matrix, the destination width, and destination height. Once again, we'll need to unpack, but our next step won't use them in this order, so we'll need to do it a different way....</p>
 <p><code>(transform, width, height)</code></p>
 <p>Again... could use indexing...</p>
-<pre><code>transform = calculate_default_transform(src_crs, dst_crs, src_width, src_height, *src_bounds)[0]
-</code></pre>
+
+<pre><code>transform = calculate_default_transform(src_crs, dst_crs, src_width, src_height, *src_bounds)[0]</code></pre>
 <p>... etc...</p>
 
 </div>
@@ -15218,10 +15194,11 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">transform</span> <span class="o">=</span> <span class="n">calculate_default_transform</span><span class="p">(</span><span class="n">src_crs</span><span class="p">,</span> <span class="n">dst_crs</span><span class="p">,</span> <span class="n">src_width</span><span class="p">,</span> <span class="n">src_height</span><span class="p">,</span> <span class="o">*</span><span class="n">src_bounds</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">width</span> <span class="o">=</span> 
 </pre></div>
 
      </div>
@@ -15237,8 +15214,8 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Or, just assign multiple variables using commas:</p>
-<pre><code>transform, dst_width, dst_height = calculate_default_transform(src_crs, dst_crs, src_width, src_height, *src_bounds)
-</code></pre>
+
+<pre><code>transform, dst_width, dst_height = calculate_default_transform(src_crs, dst_crs, src_width, src_height, *src_bounds)</code></pre>
 
 </div>
 </div>
@@ -15248,7 +15225,7 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">transform</span><span class="p">,</span> <span class="n">dst_width</span><span class="p">,</span> <span class="n">dst_height</span> <span class="o">=</span> <span class="n">calculate_default_transform</span><span class="p">(</span><span class="n">src_crs</span><span class="p">,</span> <span class="n">dst_crs</span><span class="p">,</span> <span class="n">src_width</span><span class="p">,</span> <span class="n">src_height</span><span class="p">,</span> <span class="o">*</span><span class="n">src_bounds</span><span class="p">)</span>
@@ -15267,10 +15244,10 @@ File <span class="ansi-green-fg">/opt/tljh/user/lib/python3.9/site-packages/rast
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Print them to see if it worked...</p>
+
 <pre><code>print(transform)
 print(dst_width)
-print(dst_height)
-</code></pre>
+print(dst_height)</code></pre>
 
 </div>
 </div>
@@ -15280,7 +15257,7 @@ print(dst_height)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">transform</span><span class="p">)</span>
@@ -15299,7 +15276,9 @@ print(dst_height)
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
+
 <div class="jp-OutputArea-child">
+
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15338,7 +15317,7 @@ print(dst_height)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">profile</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">profile</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -15371,10 +15350,10 @@ print(dst_height)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">profile</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">height</span> <span class="o">=</span> <span class="n">dst_height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">dst_width</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">dst_crs</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">profile</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">height</span> <span class="o">=</span> <span class="n">dst_height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">dst_width</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">dst_crs</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">transform</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15401,10 +15380,10 @@ print(dst_height)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">demWGS84</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'demWGS84.tif'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="o">**</span><span class="n">profile</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">demWGS84</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;demWGS84.tif&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="o">**</span><span class="n">profile</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15419,7 +15398,7 @@ print(dst_height)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Now, we'll run the <code>reproject()</code> function. Let's take a look at the documentation: (https://rasterio.readthedocs.io/en/latest/topics/reproject.html)</p>
+<p>Now, we'll run the <code>reproject()</code> function. Let's take a look at the documentation: (<a href="https://rasterio.readthedocs.io/en/latest/topics/reproject.html">https://rasterio.readthedocs.io/en/latest/topics/reproject.html</a>)</p>
 <div class="highlight"><pre><span></span><span class="n">reproject</span><span class="p">(</span><span class="n">source</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">band</span><span class="p">(</span><span class="n">src</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> 
           <span class="n">destination</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">band</span><span class="p">(</span><span class="n">demWGS84</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> 
           <span class="n">src_transform</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> 
@@ -15438,17 +15417,17 @@ print(dst_height)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reproject</span><span class="p">(</span><span class="n">source</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">band</span><span class="p">(</span><span class="n">src</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
-          <span class="n">destination</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">band</span><span class="p">(</span><span class="n">demWGS84</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-          <span class="n">src_transform</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> 
-          <span class="n">src_crs</span> <span class="o">=</span> <span class="n">src_crs</span><span class="p">,</span> 
-          <span class="n">dst_transofrm</span> <span class="o">=</span> <span class="n">transform</span><span class="p">,</span> 
-          <span class="n">dst_crs</span> <span class="o">=</span> <span class="n">dst_crs</span><span class="p">,</span> 
-          <span class="n">resampling</span><span class="o">=</span><span class="n">Resampling</span><span class="o">.</span><span class="n">nearest</span><span class="p">,</span> 
-          <span class="n">dst_nodata</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reproject</span><span class="p">(</span><span class="n">source</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">band</span><span class="p">(</span><span class="n">src</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> 
+         <span class="n">destination</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">band</span><span class="p">(</span><span class="n">demWGS84</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+         <span class="n">src_transform</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span>
+         <span class="n">src_crs</span> <span class="o">=</span> <span class="n">src_crs</span><span class="p">,</span>
+         <span class="n">dst_transform</span> <span class="o">=</span> <span class="n">transform</span><span class="p">,</span>
+         <span class="n">dst_crs</span> <span class="o">=</span> <span class="n">dst_crs</span><span class="p">,</span>
+         <span class="n">resampling</span> <span class="o">=</span> <span class="n">Resampling</span><span class="o">.</span><span class="n">nearest</span><span class="p">,</span>
+         <span class="n">dst_nodata</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15462,16 +15441,19 @@ print(dst_height)
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+<div class="jp-OutputArea-child">
+
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>(Band(ds=&lt;open DatasetWriter name=&#39;demWGS84.tif&#39; mode=&#39;w&#39;&gt;, bidx=1, dtype=&#39;float32&#39;, shape=(2161, 3009)),
- None)</pre>
+ Affine(1.0548706307405893e-05, 0.0, -105.30668193364492,
+        0.0, -1.0548706307405893e-05, 39.998289496963764))</pre>
 </div>
 
 </div>
@@ -15499,11 +15481,27 @@ print(dst_height)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">demWGS84</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">src</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
@@ -15540,16 +15538,16 @@ print(dst_height)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'workshopdata/Flatirons_DEM_1m.tif'</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;workshopdata/dem.tif&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
     <span class="n">transform</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">calculate_default_transform</span><span class="p">(</span>
         <span class="n">src</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span> <span class="n">dst_crs</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="o">*</span><span class="n">src</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
     <span class="n">kwargs</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">crs</span> <span class="o">=</span> <span class="n">dst_crs</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">height</span><span class="p">)</span>
 
-    <span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'demWGS84.tif'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;demWGS84.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
         <span class="n">reproject</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">rio</span><span class="o">.</span><span class="n">band</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
                   <span class="n">destination</span><span class="o">=</span><span class="n">rio</span><span class="o">.</span><span class="n">band</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
                   <span class="n">src_transform</span><span class="o">=</span><span class="n">src</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span>
@@ -15580,10 +15578,10 @@ print(dst_height)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'workshopdata/NAIP_Campus_Clip.tif'</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;NAIP_Campus_Clip.tif&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
     <span class="n">transform</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">calculate_default_transform</span><span class="p">(</span>
         <span class="n">src</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span> <span class="n">dst_crs</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="o">*</span><span class="n">src</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
     <span class="n">kwargs</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -15591,11 +15589,11 @@ print(dst_height)
                   <span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span><span class="p">,</span>
                   <span class="n">width</span> <span class="o">=</span> <span class="n">width</span><span class="p">,</span>
                   <span class="n">height</span> <span class="o">=</span> <span class="n">height</span><span class="p">,</span>
-                  <span class="n">photometric</span> <span class="o">=</span> <span class="s1">'rgb'</span><span class="p">,</span> <span class="c1">#&lt;-----important for this data!</span>
-                  <span class="n">alpha</span> <span class="o">=</span> <span class="s1">'no'</span><span class="p">)</span> <span class="c1">#&lt;-----important for this data!)</span>
+                  <span class="n">photometric</span> <span class="o">=</span> <span class="s1">&#39;rgb&#39;</span><span class="p">,</span> <span class="c1">#&lt;-----important for this data!</span>
+                  <span class="n">alpha</span> <span class="o">=</span> <span class="s1">&#39;no&#39;</span><span class="p">)</span> <span class="c1">#&lt;-----important for this data!)</span>
 
-    <span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'NAIP_Campus_Clip_WGS84.tif'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> <span class="c1">#&lt;----- Note that we're iterating over the bands</span>
+    <span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;NAIP_Campus_Clip_WGS84.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> <span class="c1">#&lt;----- Note that we&#39;re iterating over the bands</span>
             <span class="n">reproject</span><span class="p">(</span>
                 <span class="n">source</span><span class="o">=</span><span class="n">rio</span><span class="o">.</span><span class="n">band</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span>
                 <span class="n">destination</span><span class="o">=</span><span class="n">rio</span><span class="o">.</span><span class="n">band</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span>
@@ -15623,21 +15621,77 @@ print(dst_height)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'NAIP_Campus_Clip.tif'</span><span class="p">)</span> <span class="k">as</span> <span class="n">naip</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;NAIP_Campus_Clip.tif&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">naip</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">naip</span><span class="o">.</span><span class="n">colorinterp</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">CPLE_OpenFailedError</span>                      Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">rasterio\_base.pyx</span> in <span class="ansi-cyan-fg">rasterio._base.DatasetBase.__init__</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+
+<span class="ansi-green-intense-fg ansi-bold">rasterio\_shim.pyx</span> in <span class="ansi-cyan-fg">rasterio._shim.open_dataset</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+
+<span class="ansi-green-intense-fg ansi-bold">rasterio\_err.pyx</span> in <span class="ansi-cyan-fg">rasterio._err.exc_wrap_pointer</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+
+<span class="ansi-red-intense-fg ansi-bold">CPLE_OpenFailedError</span>: NAIP_Campus_Clip.tif: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-intense-fg ansi-bold">RasterioIOError</span>                           Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Temp\ipykernel_16072\1781857445.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span><span class="ansi-green-intense-fg ansi-bold">with</span> rio<span class="ansi-yellow-intense-fg ansi-bold">.</span>open<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;NAIP_Campus_Clip.tif&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">as</span> naip<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">      2</span>     print<span class="ansi-yellow-intense-fg ansi-bold">(</span>naip<span class="ansi-yellow-intense-fg ansi-bold">.</span>colorinterp<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Continuum\anaconda3\lib\site-packages\rasterio\env.py</span> in <span class="ansi-cyan-fg">wrapper</span><span class="ansi-blue-intense-fg ansi-bold">(*args, **kwds)</span>
+<span class="ansi-green-fg">    443</span> 
+<span class="ansi-green-fg">    444</span>         <span class="ansi-green-intense-fg ansi-bold">with</span> env_ctor<span class="ansi-yellow-intense-fg ansi-bold">(</span>session<span class="ansi-yellow-intense-fg ansi-bold">=</span>session<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 445</span><span class="ansi-yellow-intense-fg ansi-bold">             </span><span class="ansi-green-intense-fg ansi-bold">return</span> f<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>args<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwds<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    446</span> 
+<span class="ansi-green-fg">    447</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> wrapper
+
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Continuum\anaconda3\lib\site-packages\rasterio\__init__.py</span> in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-intense-fg ansi-bold">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
+<span class="ansi-green-fg">    217</span>         <span class="ansi-red-intense-fg ansi-bold"># None.</span>
+<span class="ansi-green-fg">    218</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> mode <span class="ansi-yellow-intense-fg ansi-bold">==</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;r&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 219</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>s <span class="ansi-yellow-intense-fg ansi-bold">=</span> DatasetReader<span class="ansi-yellow-intense-fg ansi-bold">(</span>path<span class="ansi-yellow-intense-fg ansi-bold">,</span> driver<span class="ansi-yellow-intense-fg ansi-bold">=</span>driver<span class="ansi-yellow-intense-fg ansi-bold">,</span> sharing<span class="ansi-yellow-intense-fg ansi-bold">=</span>sharing<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    220</span>         <span class="ansi-green-intense-fg ansi-bold">elif</span> mode <span class="ansi-yellow-intense-fg ansi-bold">==</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;r+&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    221</span>             s <span class="ansi-yellow-intense-fg ansi-bold">=</span> get_writer_for_path<span class="ansi-yellow-intense-fg ansi-bold">(</span>path<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">(</span>path<span class="ansi-yellow-intense-fg ansi-bold">,</span> mode<span class="ansi-yellow-intense-fg ansi-bold">,</span> driver<span class="ansi-yellow-intense-fg ansi-bold">=</span>driver<span class="ansi-yellow-intense-fg ansi-bold">,</span> sharing<span class="ansi-yellow-intense-fg ansi-bold">=</span>sharing<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">rasterio\_base.pyx</span> in <span class="ansi-cyan-fg">rasterio._base.DatasetBase.__init__</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+
+<span class="ansi-red-intense-fg ansi-bold">RasterioIOError</span>: NAIP_Campus_Clip.tif: No such file or directory</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
