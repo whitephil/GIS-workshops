@@ -10,7 +10,7 @@ has_children: true
 Welcome to this two-part web mapping workshop. Part 1 will focus on creating a basic web map using R Studio, and part 2 will cover creating web maps in Python. During the workshops, we will walk through the information and tasks detailed on these pages. Use the table of contents to navigate through the workshop.   
 _____
 ### Presenters
-Phil White <a href='https://github.com/outpw' target='_blank'><img src='../content/img/GitHub-Mark-custom.svg' style='width:15px; padding:0; border:none !important;'></a>    
+Phil White <a href='https://github.com/whitephil' target='_blank'><img src='../content/img/GitHub-Mark-custom.svg' style='width:15px; padding:0; border:none !important;'></a>    
 Earth, Environment & Geospatial Librarian  
 University of Colorado Boulder Libraries  
 [philip.white@colorado.edu](mailto:philip.white@colorado.edu)  
