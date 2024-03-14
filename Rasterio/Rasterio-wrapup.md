@@ -8,9 +8,9 @@ nav_order: 8
 
 ## Repositories:
 
-[Workshop Notebooks](https://github.com/outpw/geopandas_notebooks)  
+[Workshop Notebooks](https://github.com/whitephil/geopandas_notebooks)  
 
-[Workshop Data](https://github.com/outpw/gpddata)  
+[Workshop Data](https://github.com/whitephil/gpddata)  
 
 ***
 

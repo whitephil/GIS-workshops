@@ -12,7 +12,7 @@ Welcome to the GeoPandas workshop guide page. On this page you can find general 
 
 ***
 ### Presenters
-Phil White <a href='https://github.com/outpw' target='_blank'><img src='../content/img/GitHub-Mark-custom.svg' style='width:15px; padding:0; border:none !important;'></a>  
+Phil White <a href='https://github.com/whitephil' target='_blank'><img src='../content/img/GitHub-Mark-custom.svg' style='width:15px; padding:0; border:none !important;'></a>  
 Earth, Environment & Geospatial Librarian  
 University of Colorado Boulder Libraries  
 [philip.white@colorado.edu](mailto:philip.white@colorado.edu)
@@ -24,8 +24,8 @@ University of Colorado Boulder Libraries
 ### __Download the Workshop Materials!__
 If you are participating in the live workshop session, downloading the workshop materials is not necessary.
 {: .note}
-- All workshop data is [available here on GitHub](https://github.com/outpw/gpddata){:target="_blank"}.
-- You can [download the workshop Notebooks here](https://github.com/outpw/geopandas_notebooks){:target="_blank"}.
+- All workshop data is [available here on GitHub](https://github.com/whitephil/gpddata){:target="_blank"}.
+- You can [download the workshop Notebooks here](https://github.com/whitephil/geopandas_notebooks){:target="_blank"}.
 
 ### Goal of this Workshops
 The purpose of this workshop is to introduce you to the wonderful world of GeoPandas. GeoPandas is an open source Python package for use with vector data. This workshop does not replace formal GIS coursework, but will help you get started on basic GIS projects using GeoPandas.
